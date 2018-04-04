@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 import com.kokomusoft.panticul.R;
 
@@ -18,6 +19,7 @@ import com.kokomusoft.panticul.R;
  * A simple {@link Fragment} subclass.
  */
 public class NewsFragment extends Fragment {
+    private TextView textView;
 
 
     public NewsFragment() {
@@ -25,7 +27,7 @@ public class NewsFragment extends Fragment {
     }
 
 
-    @Override
+   /* @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -48,7 +50,25 @@ public class NewsFragment extends Fragment {
         //newsWebView.loadUrl("http://gabrieldzul.com");
 
         return rootView;
-    }
+    }*/
+
+   @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.fragment_news, container, false);
+
+        textView = (TextView)rootView.findViewById(R.id.infoTextView);
+        if (getActivity().getIntent().getExtras() != null){
+            for (String key : getActivity().getIntent().getExtras().keySet()) {
+                String value = getActivity().getIntent().getExtras().getString(key);
+                textView.append("\n" + key + ": " + value);
+            }
+        }
+
+       return rootView;
+   }
+
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager =
