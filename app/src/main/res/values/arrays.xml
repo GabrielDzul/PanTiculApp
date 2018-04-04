@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="contact_subject_type_list">
+        <item>@string/contact_subject_type_1</item>
+        <item>@string/contact_subject_type_2</item>
+    </string-array>
+
+</resources>

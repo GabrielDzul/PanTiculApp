@@ -1,0 +1,729 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.kokomusoft.panticul.fragments.WhoIAmFragment">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="0dp"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/generalDataSection"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="0dp"
+                android:paddingBottom="0dp"
+                android:orientation="vertical">
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingBottom="0dp"
+                    android:layout_marginTop="@android:dimen/app_icon_size"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:id="@+id/circularPhotoContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/circularPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/circular_photo"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="circular_profile_picture"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/circularPhoto"
+                            android:gravity="center"
+                            android:fontFamily="bold"
+                            android:textSize="20sp"
+                            android:textColor="@color/main_color"
+                            android:text="@string/general_information_title"/>
+
+
+                    </RelativeLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/commonDataContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/circularPhotoContainer"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/nameLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/importantText"
+                            android:text="@string/name_label_text_value"/>
+
+                        <TextView
+                            android:id="@+id/nameValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nameLabel"
+                            style="@style/textGrey"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/candidate_full_name"/>
+
+                        <!-- Birthday -->
+                        <TextView
+                            android:id="@+id/birhdayLabel"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/nameValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/importantText"
+                            android:text="@string/birthday_label_text_value"/>
+
+                        <TextView
+                            android:id="@+id/birthdayValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/birhdayLabel"
+                            style="@style/textGrey"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/candidate_birthday"/>
+
+                        <!-- Born Place -->
+                        <TextView
+                            android:id="@+id/bornPlaceLabel"
+                            android:layout_marginTop="10dp"
+                            android:layout_below="@id/birthdayValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/importantText"
+                            android:text="@string/born_place_label_text_value"/>
+
+                        <TextView
+                            android:id="@+id/bornPlaceValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/bornPlaceLabel"
+                            style="@style/textGrey"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/candidate_born_place"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/previousWorksTab"
+                            android:src="@drawable/previous_works_tab"
+                            android:layout_gravity="bottom|center"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <!-- Previous Works section -->
+            <LinearLayout
+                android:id="@+id/previousWorksSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/previousWorksSectionTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        style="@style/importantTextLarge"
+                        android:text="@string/previous_works_section_title"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/previousWorksSectionTitleTextView"
+                        style="@style/textWhite"
+                        android:gravity="center"
+                        android:text="@string/previous_works_intro"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/worksContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <!-- Work 1 -->
+                    <RelativeLayout
+                        android:id="@+id/work1"
+                        android:layout_width="300dp"
+                        android:padding="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/workHeaderContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/work1Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                style="@style/importantText.White"
+                                android:text="@string/work_title_1"/>
+
+                            <ImageView
+                                android:id="@+id/icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work1Title"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/flag"/>
+
+                            <TextView
+                                android:id="@+id/work1Charge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work1Title"
+                                android:layout_toRightOf="@+id/icon"
+                                style="@style/normalTextBold"
+                                android:text="@string/work_charge_1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work1Title"
+                                android:layout_toRightOf="@+id/work1Charge"
+                                android:textColor="@color/white_text"
+                                android:textStyle="italic"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/work_duration_1"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/work1Charge"
+                                android:background="@android:color/white" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/work1Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@+id/workHeaderContainer"
+                            style="@style/textWhite"
+                            android:textSize="14sp"
+                            android:text="@string/work_description_1"/>
+
+
+
+
+                    </RelativeLayout>
+
+                    <!-- Work 2 -->
+                    <RelativeLayout
+                        android:id="@+id/work2"
+                        android:layout_below="@id/work1"
+                        android:layout_width="300dp"
+                        android:padding="15dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/workHeaderContainerWork2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/work2Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                style="@style/importantText.White"
+                                android:text="@string/work_title_1"/>
+
+                            <ImageView
+                                android:id="@+id/icon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work2Title"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/flag"/>
+
+                            <TextView
+                                android:id="@+id/work2Charge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work2Title"
+                                android:layout_toRightOf="@+id/icon2"
+                                style="@style/normalTextBold"
+                                android:text="@string/work_charge_1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/work2Title"
+                                android:layout_toRightOf="@+id/work2Charge"
+                                android:textColor="@color/white_text"
+                                android:textStyle="italic"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/work_duration_1"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/work2Charge"
+                                android:background="@android:color/white" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/work2Description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@+id/workHeaderContainerWork2"
+                            style="@style/textWhite"
+                            android:textSize="14sp"
+                            android:text="@string/work_description_1"/>
+
+
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/academicFormation"
+                    android:paddingTop="30dp"
+                    android:src="@drawable/academic_formation"
+                    android:layout_gravity="bottom|center"/>
+
+            </LinearLayout>
+
+            <!-- Academic Formation section -->
+            <LinearLayout
+                android:id="@+id/academicFormationSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_orange"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/academicFormationSectionTitleTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        style="@style/importantTextLarge"
+                        android:text="@string/academic_formation_section_title"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/academicFormationSectionTitleTextView"
+                        style="@style/textWhite"
+                        android:gravity="center"
+                        android:text="@string/previous_works_intro"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/academicInstitutesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+
+                    <!-- Academic Institute 1 -->
+                    <RelativeLayout
+                        android:id="@+id/institute1"
+                        android:layout_width="300dp"
+                        android:padding="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/instituteHeaderContainer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/institute1Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/importantText.White"
+                                android:text="@string/institute_1_career"/>
+
+                            <View
+                                android:id="@+id/institute1TitleDivider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@id/institute1Title"
+                                android:background="@android:color/white" />
+
+                            <ImageView
+                                android:id="@+id/universityIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/institute1TitleDivider"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/university"/>
+
+                            <TextView
+                                android:id="@+id/institute1Career"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/institute1TitleDivider"
+                                android:layout_toRightOf="@+id/universityIcon"
+                                android:layout_alignBaseline="@id/universityIcon"
+                                style="@style/normalTextBold"
+                                android:text="@string/institute_1_name"/>
+
+                            <ImageView
+                                android:id="@+id/calendarIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/universityIcon"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/calendar"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/universityIcon"
+                                android:layout_toRightOf="@+id/calendarIcon"
+                                android:layout_alignBaseline="@id/calendarIcon"
+                                android:textColor="@color/white_text"
+                                android:textStyle="italic"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/work_duration_1"/>
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/institute1CareerDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@+id/instituteHeaderContainer"
+                            style="@style/textWhite"
+                            android:textSize="14sp"
+                            android:text="@string/work_description_1"/>
+
+                    </RelativeLayout>
+
+                    <!-- Academic Institute 2 -->
+                    <RelativeLayout
+                        android:id="@+id/institute2"
+                        android:layout_width="300dp"
+                        android:layout_below="@id/institute1"
+                        android:padding="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/instituteHeaderContainer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/institute2Title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="@style/importantText.White"
+                                android:text="@string/institute_1_career"/>
+
+                            <View
+                                android:id="@+id/institute2TitleDivider"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_below="@id/institute2Title"
+                                android:background="@android:color/white" />
+
+                            <ImageView
+                                android:id="@+id/universityIcon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/institute2TitleDivider"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="5dp"
+                                android:src="@drawable/university"/>
+
+                            <TextView
+                                android:id="@+id/institute2Career"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/institute2TitleDivider"
+                                android:layout_toRightOf="@+id/universityIcon2"
+                                android:layout_alignBaseline="@id/universityIcon2"
+                                style="@style/normalTextBold"
+                                android:text="@string/institute_1_name"/>
+
+                            <ImageView
+                                android:id="@+id/calendarIcon2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/universityIcon2"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp"
+                                android:src="@drawable/calendar"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/universityIcon2"
+                                android:layout_toRightOf="@+id/calendarIcon2"
+                                android:layout_alignBaseline="@id/calendarIcon2"
+                                android:textColor="@color/white_text"
+                                android:textStyle="italic"
+                                android:fontFamily="sans-serif-light"
+                                android:text="@string/work_duration_1"/>
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/institute2CareerDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_below="@+id/instituteHeaderContainer2"
+                            style="@style/textWhite"
+                            android:textSize="14sp"
+                            android:text="@string/work_description_1"/>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hobbies"
+                    android:paddingTop="30dp"
+                    android:src="@drawable/hobbies"
+                    android:layout_gravity="bottom|center"/>
+
+
+            </LinearLayout>
+
+            <!-- Hobbies section -->
+        <LinearLayout
+            android:id="@+id/hobbiesSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/strong_orange"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/HobbiesSectionTitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    style="@style/importantTextLarge"
+                    android:text="@string/hobbies_section_title"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/HobbiesSectionTitleTextView"
+                    style="@style/textWhite"
+                    android:gravity="center"
+                    android:text="@string/previous_works_intro"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hobbiesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+            <!-- Sports-->
+            <RelativeLayout
+                android:id="@+id/sports"
+                android:layout_width="300dp"
+                android:padding="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/sportsIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/swimming"/>
+
+                <TextView
+                    android:id="@+id/sportTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sportsIcon"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    style="@style/importantText.White"
+                    android:text="@string/sports_title"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/sportDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_below="@+id/sportTitle"
+                    style="@style/textWhite"
+                    android:textSize="14sp"
+                    android:text="@string/work_description_1"/>
+
+                </RelativeLayout>
+
+                <!-- Books-->
+                <RelativeLayout
+                    android:id="@+id/Books"
+                    android:layout_width="300dp"
+                    android:layout_below="@id/sports"
+                    android:padding="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/booksIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/book"/>
+
+                    <TextView
+                        android:id="@+id/booksTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/booksIcon"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        style="@style/importantText.White"
+                        android:text="@string/books_title"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/booksDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_below="@+id/booksTitle"
+                        style="@style/textWhite"
+                        android:textSize="14sp"
+                        android:text="@string/work_description_1"/>
+
+                </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+</FrameLayout>

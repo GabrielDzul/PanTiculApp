@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/listItemIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/listItemTitle"
+            android:layout_marginTop="-5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/listing_style_handshake_orange"/>
+
+        <TextView
+            android:id="@+id/listItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/listItemIcon"
+            style="@style/importantText.Orange.Strong"
+            android:textAllCaps="false"
+            android:text="@string/simple_proposal_placeholder_title"/>
+
+        <TextView
+            android:id="@+id/listItemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listItemTitle"
+            android:layout_toRightOf="@+id/listItemIcon"
+            style="@style/text.Orange.Strong"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/work_description_1"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

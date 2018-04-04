@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Politics App</string>
+
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="candidate_name">Juan Perez</string>
+    <string name="presentation_text">Hola, soy un diseñador profesional de UI/UX y desarrollador web. Me gusta el diseño creativo. ¿Te gustaría saber más de mi?</string>
+    <string name="general_information_title">Información General</string>
+    <string name="name_label_text_value">Nombre:</string>
+    <string name="candidate_full_name">Juan Perez Albornoz</string>
+    <string name="birthday_label_text_value">Nacimiento</string>
+    <string name="candidate_birthday">1 septiembre de 1990</string>
+    <string name="born_place_label_text_value">Lugar</string>
+    <string name="candidate_born_place">Ticul, Yucatán</string>
+    <string name="previous_works_section_title">Trabajos Anteriores</string>
+    <string name="previous_works_intro">Durante mi vida he laborado en distintas dependencias y ocupado diversos cargos. Algunos de los más importantes son:</string>
+    <string name="work_title_1">Seguros Vita</string>
+    <string name="work_charge_1">Presidente - </string>
+    <string name="work_duration_1">jun 2012 - ene 2015</string>
+    <string name="work_description_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
+    <string name="academic_formation_section_title">Formación Académica</string>
+    <string name="institute_1_career">Diseño Gráfico</string>
+    <string name="institute_1_name">Instituto Ticul</string>
+    <string name="hobbies_section_title">Intereses y Hobbies</string>
+    <string name="sports_title">Deportes y Competencias</string>
+    <string name="books_title">Libros y publicaciones</string>
+    <string name="proposal_section_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</string>
+    <string name="simple_proposal_placeholder_title">Esto es una propuesta simple</string>
+    <string name="proposals_section_title">Mis Propuestas</string>
+    <string name="contact_presentation_text">¿Tienes alguna duda o crees que se nos escapa alguna propuesta? ¡Utiliza el siguiente formulario para hacernosla llegar!</string>
+    <string name="edit_text_name_placeholder">Su nombre</string>
+
+    <string name="contact_subject_type_1">Comentario General</string>
+    <string name="contact_subject_type_2">Recomendar una Propuesta</string>
+    <string name="spinner_subject_type_text">Escoje el Asunto</string>
+    <string name="edit_text_message_placeholder">Su mensaje</string>
+    <string name="contact_send_button_text">Enviar Mensaje</string>
+    <string name="contact_section_title">Contacto</string>
+
+</resources>

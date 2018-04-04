@@ -1,0 +1,328 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.kokomusoft.panticul.fragments.ProposalsFragment">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="0dp"
+        android:paddingBottom="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/proposalSectionIntro"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="0dp"
+                android:paddingBottom="0dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_weight="3">
+
+                    <TextView
+                        android:id="@+id/proposalSectionIntroText"
+                        style="@style/importantTextLarge.Orange.Strong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/proposals_section_title"/>
+
+                    <ImageView
+                        android:id="@+id/proposalsSectionMainImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/proposals_section_main_image_v2"
+                        android:layout_below="@+id/proposalSectionIntroText"
+                        android:layout_centerHorizontal="true"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:background="@color/strong_orange">
+
+
+
+                    <TextView
+                        style="@style/importantText.White"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="@string/proposal_section_description"
+                        android:textStyle="normal"/>
+
+
+
+                    </LinearLayout>
+
+            </LinearLayout><!--proposalSectionIntro-->
+
+            <!-- Start SocialAndFamiliar -->
+        <LinearLayout
+            android:id="@+id/socialAndFamiliarSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <!-- Header Start -->
+            <RelativeLayout
+                android:id="@+id/SocialAndFamiliarsectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:paddingBottom="0dp">
+
+                <ImageView
+                    android:id="@+id/socialAndFamiliarIcon"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/social_and_familiar_icon"/>
+
+                <TextView
+                    android:id="@+id/socialAndFamiliarTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialAndFamiliarIcon"
+                    android:gravity="center_horizontal"
+                    style="@style/importantTextLarge.Orange.Strong"
+                    android:textAllCaps="false"
+                    android:text="Ambito Social y Familiar"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialAndFamiliarTitle"
+                    android:gravity="center_horizontal"
+                    style="@style/text.Orange.Strong"
+                    android:paddingTop="10dp"
+                    android:text="@string/presentation_text"/>
+
+                </RelativeLayout><!-- Header End -->
+
+            <!-- Start Proposal 1 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/socialAndFamiliarProposalIcon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/listing_style_handshake_orange"/>
+
+                <TextView
+                    android:id="@+id/socialAndFamiliarProposalTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/socialAndFamiliarProposalIcon1"
+                    android:layout_marginTop="-6dp"
+                    style="@style/importantText.Orange.Strong"
+                    android:textAllCaps="false"
+                    android:text="@string/simple_proposal_placeholder_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialAndFamiliarProposalTitle1"
+                    android:layout_toRightOf="@id/socialAndFamiliarProposalIcon1"
+                    style="@style/text.Orange.Strong"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/work_description_1"/>
+
+                </RelativeLayout> <!-- Proposal 1 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/socialAndFamiliarProposalIcon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/listing_style_handshake_orange"/>
+
+                <TextView
+                    android:id="@+id/socialAndFamiliarProposalTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/socialAndFamiliarProposalIcon2"
+                    android:layout_marginTop="-6dp"
+                    style="@style/importantText.Orange.Strong"
+                    android:textAllCaps="false"
+                    android:text="@string/simple_proposal_placeholder_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/socialAndFamiliarProposalTitle2"
+                    android:layout_toRightOf="@id/socialAndFamiliarProposalIcon2"
+                    style="@style/text.Orange.Strong"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/work_description_1"/>
+
+            </RelativeLayout> <!-- Proposal 2 -->
+
+
+
+            </LinearLayout><!-- End SocialAndFamiliar  -->
+
+        <!-- Start HealthAndEnvironment -->
+        <LinearLayout
+            android:id="@+id/healthAndEnvironmentSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:background="@color/main_color"
+            android:paddingBottom="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+
+            <!-- Header Start -->
+            <RelativeLayout
+                android:id="@+id/healthAndEnvironmentHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:paddingBottom="0dp">
+
+                <ImageView
+                    android:id="@+id/healthAndEnvironmentIcon"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/health_and_environment_icon"/>
+
+                <TextView
+                    android:id="@+id/healthAndEnvironmentTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/healthAndEnvironmentIcon"
+                    android:gravity="center_horizontal"
+                    style="@style/importantTextLarge"
+                    android:textAllCaps="false"
+                    android:text="Salud Y Medio Ambiente"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/healthAndEnvironmentTitle"
+                    android:gravity="center_horizontal"
+                    style="@style/textWhite"
+                    android:paddingTop="10dp"
+                    android:text="@string/presentation_text"/>
+
+                </RelativeLayout> <!-- End Header -->
+
+            <!-- Start Proposal 1 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/healthAndEnvironmentProposalIcon1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/listing_style_handshake_white"/>
+
+                <TextView
+                    android:id="@+id/healthAndEnvironmentProposalTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/healthAndEnvironmentProposalIcon1"
+                    android:layout_marginTop="-6dp"
+                    style="@style/importantText.White"
+                    android:textAllCaps="false"
+                    android:text="@string/simple_proposal_placeholder_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/healthAndEnvironmentProposalTitle1"
+                    android:layout_toRightOf="@id/healthAndEnvironmentProposalIcon1"
+                    style="@style/textWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/work_description_1"/>
+
+            </RelativeLayout> <!-- Proposal 1 -->
+
+            <!-- Start Proposal 2 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/healthAndEnvironmentProposalIcon2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/listing_style_handshake_white"/>
+
+                <TextView
+                    android:id="@+id/healthAndEnvironmentProposalTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/healthAndEnvironmentProposalIcon2"
+                    android:layout_marginTop="-6dp"
+                    style="@style/importantText.White"
+                    android:textAllCaps="false"
+                    android:text="@string/simple_proposal_placeholder_title"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/healthAndEnvironmentProposalTitle2"
+                    android:layout_toRightOf="@id/healthAndEnvironmentProposalIcon2"
+                    style="@style/textWhite"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/work_description_1"/>
+
+            </RelativeLayout> <!-- Proposal 2 -->
+
+            </LinearLayout> <!-- End HealthAndEnvironment -->
+
+
+
+            </LinearLayout><!--Enc Container-->
+
+
+
+
+    </ScrollView>
+
+</FrameLayout>
