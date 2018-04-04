@@ -12,9 +12,13 @@
         android:dividerHeight="1dp"
         android:listSelector="@drawable/news_list_row_selector" />-->
 
-    <WebView
+    <!--<WebView
         android:id="@+id/newsWebView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></WebView>
+        android:layout_height="match_parent"></WebView>-->
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
